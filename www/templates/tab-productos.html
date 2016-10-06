@@ -1,0 +1,16 @@
+<ion-view view-title="Productos">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="producto in productos" type="item-text-wrap" href="#/tab/productos/{{producto.id}}">
+        <img ng-src="{{producto.face}}">
+        <h2>{{producto.name}}</h2>
+        <p>{{producto.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(producto)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
